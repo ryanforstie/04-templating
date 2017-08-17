@@ -23,11 +23,11 @@
 
   <script id="article-template" type="text/x-handlebars-template">
 
-    <article class="{{template}}" data-category="cat">
+    <article class="{{template}}" data-category="{{category}}" data-author="{{author}}">
       <header>
         <h1>{{title}}</h1>
         <div class="{{byline}}">
-          By <address><a href="{{authorUrl}}">{{author}}</a></address> published <time>{{daysAgo}} days ago.</time>
+          By <address><a href="{{authorUrl}}">{{author}}</a></address> <time>{{publishStatus}}</time>
         </div>
       </header>
       <section class="{{article-body}}"></section>
@@ -35,11 +35,7 @@
       <a href="#" class="{{read-on}}">Read on &rarr;</a>
     </article>
 
-    <select id="category-filter">
-        <option value="{{category}}">{{category}}</option>
-    </select>
-
-  </script>
+    </script>
 
 </head>
 
