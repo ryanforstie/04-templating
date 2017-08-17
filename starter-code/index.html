@@ -13,7 +13,7 @@
   <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 
   <!--
-      TODO: Add a script tag to hold the Handlebars template.
+      DONE: Add a script tag to hold the Handlebars template.
         - Be sure to give it a meaningful id attribute.
         - Move your old template structure to here. Remember that this template
           needs to have the same structure as the old one!
@@ -23,19 +23,19 @@
 
   <script id="article-template" type="text/x-handlebars-template">
 
-    <article class="{{template}}" data-category="{{category}}" data-author="{{author}}">
+    <article data-category="{{category}}" data-author="{{author}}">
       <header>
         <h1>{{title}}</h1>
-        <div class="{{byline}}">
-          By <address><a href="{{authorUrl}}">{{author}}</a></address> <time>{{publishStatus}}</time>
+        <div class="byline">
+          By <address><a href="{{authorUrl}}">{{author}}</a></address> published <time pubdate datetime="2000-01-01">{{daysAgo}}</time>
         </div>
       </header>
-      <section class="{{article-body}}"></section>
-      {{{body}}}
-      <a href="#" class="{{read-on}}">Read on &rarr;</a>
+
+      <section class="article-body">{{{body}}}</section>
+      <a href="#" class="read-on">Read on &rarr;</a>
     </article>
 
-    </script>
+  </script>
 
 </head>
 
