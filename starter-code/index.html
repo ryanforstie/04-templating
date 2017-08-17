@@ -23,19 +23,19 @@
 
   <script id="article-template" type="text/x-handlebars-template">
 
-    <article class="{{template}}" data-category="{{category}}" data-author="{{author}}">
+    <article data-category="{{category}}" data-author="{{author}}">
       <header>
         <h1>{{title}}</h1>
-        <div class="{{byline}}">
-          By <address><a href="{{authorUrl}}">{{author}}</a></address> <time>{{publishStatus}}</time>
+        <div class="byline">
+          By <address><a href="{{authorUrl}}">{{author}}</a></address> published <time pubdate datetime="2000-01-01">{{daysAgo}}</time>
         </div>
       </header>
-      <section class="{{article-body}}"></section>
-      {{{body}}}
-      <a href="#" class="{{read-on}}">Read on &rarr;</a>
+      
+      <section class="article-body">{{{body}}}</section>
+      <a href="#" class="read-on">Read on &rarr;</a>
     </article>
 
-    </script>
+  </script>
 
 </head>
 
